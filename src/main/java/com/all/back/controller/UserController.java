@@ -1,8 +1,11 @@
-package com.all.back;
+package com.all.back.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.all.back.model.User;
+import com.all.back.services.UserService;
 
 @RestController
 public class UserController {
