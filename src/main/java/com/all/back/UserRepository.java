@@ -1,9 +1,7 @@
-package com.all.back.repository;
+package com.all.back;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-
-import com.all.back.model.User;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {

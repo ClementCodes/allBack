@@ -1,12 +1,9 @@
-package com.all.back.services;
+package com.all.back;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.all.back.model.User;
-import com.all.back.repository.UserRepository;
 
 import lombok.Data;
 
@@ -14,7 +11,7 @@ import lombok.Data;
 @Service
 public class UserService {
 
-    @Autowired(required = false)
+    @Autowired
     private UserRepository userRepository;
 
     public Optional<User> getUser(final Long id) {
