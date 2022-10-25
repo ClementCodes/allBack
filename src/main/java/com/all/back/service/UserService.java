@@ -1,9 +1,12 @@
-package com.all.back;
+package com.all.back.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.all.back.model.User;
+import com.all.back.repository.UserRepository;
 
 import lombok.Data;
 
