@@ -1,8 +1,8 @@
-package com.all.back.service;
+package com.all.back.backUser.service;
 
 import java.util.List;
 
-import com.all.back.model.User;
+import com.all.back.backUser.model.User;
 
 public interface UserService {
 

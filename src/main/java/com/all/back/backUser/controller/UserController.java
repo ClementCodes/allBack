@@ -1,4 +1,4 @@
-package com.all.back.controller;
+package com.all.back.backUser.controller;
 
 import java.util.List;
 
@@ -9,20 +9,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.all.back.model.User;
-import com.all.back.service.UserService;
+import com.all.back.backUser.model.User;
+import com.all.back.backUser.service.UserService;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class UserController {
     @Autowired
     private UserService userService;
 
-    @CrossOrigin
     @GetMapping("/users")
     public List<User> getUser() {
         return userService.getUser();

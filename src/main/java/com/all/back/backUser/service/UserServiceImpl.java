@@ -1,4 +1,4 @@
-package com.all.back.service;
+package com.all.back.backUser.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.all.back.model.User;
-import com.all.back.repository.UserRepository;
+import com.all.back.backUser.model.User;
+import com.all.back.backUser.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -45,4 +45,5 @@ public class UserServiceImpl implements UserService {
         userRepo.delete(user);
 
     }
+
 }
