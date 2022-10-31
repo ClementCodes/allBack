@@ -1,17 +1,24 @@
 package com.all.back.backUser.model;
 
-import java.security.Timestamp;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.all.back.backPlant.model.Plant;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -39,6 +46,10 @@ public class User {
     @UpdateTimestamp
     @Column(name = "update_at", nullable = false, updatable = false)
     private Date updateTumeStamp;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    List<Plant> plants = new ArrayList<>();
 
     public User() {
     }
