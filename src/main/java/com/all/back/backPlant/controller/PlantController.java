@@ -19,6 +19,7 @@ import com.all.back.backPlant.service.PlantService;
 @RestController
 @RequestMapping("/api")
 public class PlantController {
+
     @Autowired
     private PlantService plantService;
 

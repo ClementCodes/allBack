@@ -17,17 +17,16 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
 @Entity
 @Table(name = "plants")
 public class Plant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
     private String nameCommun;
     private String nameScientist;
@@ -160,20 +159,6 @@ public class Plant {
     public Plant updateTumeStamp(Date updateTumeStamp) {
         setUpdateTumeStamp(updateTumeStamp);
         return this;
-    }
-
-    @Override
-    public String toString() {
-        return "{" +
-                " id='" + getId() + "'" +
-                ", nameCommun='" + getNameCommun() + "'" +
-                ", nameScientist='" + getNameScientist() + "'" +
-                ", wateringDate='" + getWateringDate() + "'" +
-                ", season='" + getSeason() + "'" +
-                ", time='" + getTime() + "'" +
-                ", createdDate='" + getCreatedDate() + "'" +
-                ", updateTumeStamp='" + getUpdateTumeStamp() + "'" +
-                "}";
     }
 
 }
